@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_main).apply {
             this.setOnClickListener {
                 val intent = Intent(this@MainActivity, SecondActivity::class.java)
-                intent.putExtra("key_person", Person(1, ""))
+                intent.putExtra("key_person", Person(1, "Shubham"))
                 startActivity(intent)
             }
         }

@@ -1,6 +1,7 @@
 package com.example.learningdnapplication
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 /**
@@ -14,13 +15,14 @@ import androidx.appcompat.app.AppCompatActivity
  *
  * System custom
  * onCreate - Register
- * onDestoy - unregister
+ * onDestroy - unregister
  */
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-//        val person = intent?.getParcelableExtra<Person>("key_person")
-//        person.age
+
+        val person = intent?.getParcelableExtra<Person>("key_person")!!
+        Toast.makeText(this, person.name, Toast.LENGTH_SHORT).show()
     }
 }
